@@ -1,0 +1,84 @@
+{
+  "project": {
+    "id": "project009",
+    "display_name": "Almas Official",
+    "edition": "Project 009",
+    "publisher": "Almas Official",
+    "copyright": "© 2026 Almas Official — Project 009 modification layer",
+    "package_hint": "com.almasofficial.project009"
+  },
+  "brand": {
+    "short_name": "AO",
+    "tagline": "Built different.",
+    "theme": "dark-glass-neon",
+    "primary_hex": "#0B0F19",
+    "accent_hex": "#00E5FF",
+    "accent2_hex": "#7C4DFF",
+    "success_hex": "#00E676",
+    "danger_hex": "#FF3D71"
+  },
+  "economy": {
+    "version": 1,
+    "currencies": {
+      "ao_coin": {
+        "display_name": "AO Coin",
+        "symbol": "AO",
+        "start_balance": 2500,
+        "min_balance": 0,
+        "max_balance": 999999999
+      },
+      "gold": {
+        "display_name": "Gold",
+        "symbol": "G",
+        "start_balance": 50,
+        "min_balance": 0,
+        "max_balance": 9999999
+      },
+      "bank": {
+        "display_name": "Bank",
+        "symbol": "₸",
+        "start_balance": 10000,
+        "min_balance": 0,
+        "max_balance": 999999999
+      },
+      "reputation": {
+        "display_name": "Reputation",
+        "symbol": "RP",
+        "start_balance": 0,
+        "min_balance": 0,
+        "max_balance": 1000000
+      }
+    },
+    "daily_rewards": [
+      {"day": 1, "ao_coin": 500, "gold": 0},
+      {"day": 2, "ao_coin": 750, "gold": 0},
+      {"day": 3, "ao_coin": 1000, "gold": 5},
+      {"day": 4, "ao_coin": 1250, "gold": 5},
+      {"day": 5, "ao_coin": 1500, "gold": 10},
+      {"day": 6, "ao_coin": 2000, "gold": 10},
+      {"day": 7, "ao_coin": 5000, "gold": 25}
+    ],
+    "jobs": {
+      "courier": {"reward_ao_coin": 350, "reputation": 2},
+      "taxi": {"reward_ao_coin": 500, "reputation": 3},
+      "mechanic": {"reward_ao_coin": 650, "reputation": 4},
+      "police_shift": {"reward_ao_coin": 900, "reputation": 6}
+    },
+    "shop": {
+      "starter_vehicle_skin": {"price": 7500, "currency": "ao_coin"},
+      "premium_plate": {"price": 25, "currency": "gold"},
+      "vip_badge": {"price": 100, "currency": "gold"}
+    },
+    "banking": {
+      "deposit_fee_percent": 0.0,
+      "withdraw_fee_percent": 1.0,
+      "daily_interest_percent": 0.1
+    }
+  },
+  "patching": {
+    "android_app_label": "Almas Official",
+    "metadata_asset_dir": "assets/project009",
+    "preserve_original_signing": false,
+    "old_brand_names": []
+  }
+}

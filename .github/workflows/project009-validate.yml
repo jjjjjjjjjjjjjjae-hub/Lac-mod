@@ -1,0 +1,36 @@
+name: Project 009 Validate
+
+on:
+  push:
+    branches:
+      - project009-almas-official
+  pull_request:
+    paths:
+      - 'project009/**'
+      - '.github/workflows/project009-validate.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate JSON
+        run: python -m json.tool project009/config/project009.json >/dev/null
+
+      - name: Compile Project 009 Python
+        run: |
+          python -m py_compile project009/economy.py
+          python -m py_compile project009/patch_project009.py
+          python -m py_compile project009/test_economy.py
+
+      - name: Run economy tests
+        working-directory: project009
+        run: python -m unittest -v test_economy.py
